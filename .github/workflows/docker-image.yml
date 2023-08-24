@@ -30,4 +30,5 @@ jobs:
         push: true
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/openai-proxy:latest
-          ${{ secrets.DOCKERHUB_USERNAME }}/openai-proxy:$(date +%s)
+          ${{ secrets.DOCKERHUB_USERNAME }}/openai-proxy:${{ github.sha }}
+        
